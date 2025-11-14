@@ -1,9 +1,12 @@
 package br.com.airline.ticketing.system.model;
 
-public class Passageiro {
+import java.util.Date;
+
+public class Passageiro extends Pessoa {
     private String documentos, numeroCartao;
 
-    public Passageiro(String documentos, String numeroCartao) {
+    public Passageiro(Long id, String nome, String email, String telefone, String usuario, String senha, Date dataNascimento, String documentos, String numeroCartao) {
+        super(id, nome, email, telefone, usuario, senha, dataNascimento);
         this.documentos = documentos;
         this.numeroCartao = numeroCartao;
     }

@@ -1,9 +1,12 @@
 package br.com.airline.ticketing.system.model;
 
-public class Funcionario {
+import java.util.Date;
+
+public class Funcionario extends Pessoa {
     private String codigo, contaCorrente;
 
-    public Funcionario(String codigo, String contaCorrente) {
+    public Funcionario(Long id, String nome, String email, String telefone, String usuario, String senha, Date dataNascimento, String codigo, String contaCorrente) {
+        super(id, nome, email, telefone, usuario, senha, dataNascimento);
         this.codigo = codigo;
         this.contaCorrente = contaCorrente;
     }
