@@ -3,11 +3,17 @@ package br.com.airline.ticketing.system.model;
 public class Aeroporto {
     private Long id;
     private String nome, codigo;
+    private Rota[] rotas = new Rota[2];
 
     public Aeroporto(Long id, String nome, String codigo) {
         this.id = id;
         this.nome = nome;
         this.codigo = codigo;
+    }
+
+    public Aeroporto(Long id, String nome, String codigo, Rota[] rotas) {
+        this(id, nome, codigo);
+        this.rotas = rotas;
     }
 
     public Long getId() {
@@ -32,6 +38,14 @@ public class Aeroporto {
 
     public void setCodigo(String codigo) {
         this.codigo = codigo;
+    }
+
+    public Rota[] getRotas() {
+        return rotas;
+    }
+
+    public void setRotas(Rota[] rotas) {
+        this.rotas = rotas;
     }
 
     @Override
