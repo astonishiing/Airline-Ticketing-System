@@ -15,6 +15,13 @@ public class Funcionario extends Pessoa {
         this.papelList = new ArrayList<>();
     }
 
+    public void adicionarPessoa(Papel papelList){
+        this.papelList.add(papelList);
+    }
+    public void removerPessoa(Papel papelList){
+        this.papelList.remove(papelList);
+    }
+
     public String getCodigo() {
         return codigo;
     }
