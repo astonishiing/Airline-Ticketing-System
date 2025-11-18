@@ -5,6 +5,8 @@ public class Endereco {
     private String rua;
     private Integer numero;
     private String complemento, bairro, cidade, estado, pais;
+    private Pessoa pessoa;
+    private Aeroporto aeroporto;
 
     public Endereco(Long id, String rua, Integer numero, String complemento, String bairro, String cidade, String estado, String pais) {
         this.id = id;
@@ -15,6 +17,12 @@ public class Endereco {
         this.cidade = cidade;
         this.estado = estado;
         this.pais = pais;
+    }
+
+    public Endereco(Long id, String rua, Integer numero, String complemento, String bairro, String cidade, String estado, String pais, Pessoa pessoa, Aeroporto aeroporto) {
+        this(id, rua, numero, complemento, bairro, cidade, estado, pais);
+        this.pessoa = pessoa;
+        this.aeroporto = aeroporto;
     }
 
     public Long getId() {
@@ -79,6 +87,22 @@ public class Endereco {
 
     public void setPais(String pais) {
         this.pais = pais;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public Aeroporto getAeroporto() {
+        return aeroporto;
+    }
+
+    public void setAeroporto(Aeroporto aeroporto) {
+        this.aeroporto = aeroporto;
     }
 
     @Override
